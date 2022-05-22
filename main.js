@@ -22,38 +22,14 @@ inputs.forEach(function (input) {
     const input_value = parseFloat(this_input.value);
     const this_row = this_input.closest(".row");
 
-    const amazon = this_row.querySelector(".amazon");
-    const amazon_price = parseFloat(amazon.dataset.price);
-    const amazon_cost = input_value * amazon_price;
-    const amazon_span = amazon.querySelector("span");
-    amazon_span.innerHTML = round_number(amazon_cost);
-
-    const freshdirect = this_row.querySelector(".freshdirect");
-    const freshdirect_price = parseFloat(freshdirect.dataset.price);
-    const freshdirect_cost = input_value * freshdirect_price;
-    const freshdirect_span = freshdirect.querySelector("span");
-    freshdirect_span.innerHTML = round_number(freshdirect_cost);
-
     const peapod = this_row.querySelector(".peapod");
     const peapod_price = parseFloat(peapod.dataset.price);
     const peapod_cost = input_value * peapod_price;
     const peapod_span = peapod.querySelector("span");
     peapod_span.innerHTML = round_number(peapod_cost);
-
-    amazon.classList.add("active");
-    freshdirect.classList.add("active");
+    
     peapod.classList.add("active");
 
-    let cheapest = amazon;
-
-    if (freshdirect_cost < amazon_cost && freshdirect_cost < peapod_cost) {
-      cheapest = freshdirect;
-    }
-
-    if (peapod_cost < amazon_cost && peapod_cost < freshdirect_cost) {
-      cheapest = peapod;
-    }
-
-    cheapest.classList.add("cheap");
+  
   });
 });
