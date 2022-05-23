@@ -243,6 +243,103 @@ figcaption {
 ANNOTATED IMAGE
 **************************************************************************/
 
+//*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+
+
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+
+
+/** SET BORDER BOX EVERYWHERE */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/** APPLY BASE TAG STYLES */
+
+body,
+html {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+    font-family: 'Oxygen', sans-serif;
+}
+
+
+/** RESPONSIVE IMAGES */
+
+figure,
+img {
+    /* Sets image width to match parent */
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+header {
+    margin-bottom: 16px;
+}
+
+header p {
+    margin: 0;
+}
+
+
+/** Caption styles */
+
+.caption,
+figcaption {
+    font-size: 0.9rem;
+    color: #8e8a8a;
+    padding: 5px 0;
+}
+
+
+/** BASE CLASSES */
+
+
+/** Container styles to keep content from becoming too wide or coming too close to
+* mobile edge */
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+
+/** Images are allowed to be a little wider when broken out into their own container */
+
+.container.image {
+    max-width: 1200px;
+    padding: 0;
+}
+
+.container.image .caption,
+.container.image figcaption {
+    padding: 5px 10px;
+}
+
+
 /**
 * Make the annotated image container relative so it can control absolute objects
 */
@@ -385,4 +482,114 @@ ANNOTATED IMAGE
 .annotate .dot.active .close {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
+}
+
+
+/**
+* Set the collage up as a flexbox
+*/
+
+.collage {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+/**
+* Each image div is half the width of the box with 2.5px of padding.
+* 2.5px is used because when the images are up against each other their
+* combined padding creates the desired 5px of negative space
+*/
+
+.collage .img {
+    flex-basis: 50%;
+    padding: 2.5px;
+}
+
+
+/**
+* Eliminate the right padding from the even children so the image goes full bleed
+*/
+
+.collage .img:nth-child(even) {
+    padding-right: 0;
+}
+
+
+/**
+* Eliminate the left padding from the odd children so the image goes full bleed
+*/
+
+.collage .img:nth-child(odd) {
+    padding-left: 0;
+}
+
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+    /**
+    * Increase the padding on desktop because it's nicer
+    */
+    .annotate .dot.active .inner {
+        padding: 75px;
+    }
+    /**
+    * Some dots may need to be slightly repositioned on tablet compared to mobile.
+    * We can do that here
+    */
+    #arm:not(.active) {
+        top: 53%;
+        right: 26%;
+    }
+    #moxie:not(.active) {
+        bottom: 43%;
+        left: 27%;
+    }
+    #battery:not(.active) {
+        top: 44%;
+        left: 13%;
+    }
+}
+
+
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+
+@media(min-width: 769px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 769px or larger -- so desktop */
+}
+
+
+/*********************************************************************
+  YOUR MEDIUM-DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+
+@media(min-width: 805px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 769px or larger -- so desktop */
+    .container {
+        padding: 0;
+    }
+}
+
+
+/*********************************************************************
+  YOUR LARGE DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+
+@media(min-width: 1205px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 769px or larger -- so desktop */
+    .container.image .caption,
+    .container.image figcaption {
+        padding: 5px 0;
+    }
 }
