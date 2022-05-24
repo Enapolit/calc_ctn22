@@ -430,29 +430,30 @@ figcaption {
 * Use IDs to position the dots. The IDs include a :not pseudo-selector so that the dot's active class can override these behaviors
 */
 
+
 #camera:not(.active) {
     top: 18%;
-    right: 84%;
+    right: 24%;
 }
 
 #moxie:not(.active) {
-    bottom: 87%;
-    right: 58%;
+    bottom: 50%;
+    right: 24%;
 }
 
 #arm:not(.active) {
-    top: 70%;
-    right: 84%;
+    top: 50%;
+    right: 24%;
 }
 
 #wheels:not(.active) {
-    top: 50%;
-    right: 70%;
+    top: 70%;
+    right: 24%;
 }
 
 #battery:not(.active) {
-    top: 20%;
-    right: 42%;
+    top: 40%;
+    right: 24%;
 }
 
 
