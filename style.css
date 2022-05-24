@@ -432,28 +432,28 @@ figcaption {
 
 
 #camera:not(.active) {
-    top: 18%;
-    right: 84%;
+    top: 38%;
+    right: 93%;
 }
 
 #moxie:not(.active) {
-    bottom: 95%;
-    right:20%;
+    bottom: 62%;
+    right: 42%;
 }
 
 #arm:not(.active) {
-    top: 70%;
-    right: 84%;
+    bottom: 27%;
+    right: 22%;
 }
 
 #wheels:not(.active) {
-    top: 50%;
-    right: 69%;
+    top: 51%;
+    right: 72%;
 }
 
 #battery:not(.active) {
-    top: 16%;
-    right: 40%;
+    top: 24%;
+    left: 86%;
 }
 
 
