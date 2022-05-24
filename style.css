@@ -436,8 +436,8 @@ figcaption {
 }
 
 #moxie:not(.active) {
-    bottom: 50%;
-    right: 24%;
+    bottom: 87%;
+    right: 58%;
 }
 
 #arm:not(.active) {
@@ -451,8 +451,8 @@ figcaption {
 }
 
 #battery:not(.active) {
-    top: 40%;
-    right: 24%;
+    top: 16%;
+    right: 40%;
 }
 
 
