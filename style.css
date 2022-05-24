@@ -437,8 +437,8 @@ figcaption {
 }
 
 #moxie:not(.active) {
-    bottom: 87%;
-    right:58%;
+    bottom: 95%;
+    right:20%;
 }
 
 #arm:not(.active) {
