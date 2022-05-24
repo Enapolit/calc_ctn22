@@ -544,18 +544,30 @@ figcaption {
     * Some dots may need to be slightly repositioned on tablet compared to mobile.
     * We can do that here
     */
-    #arm:not(.active) {
-        top: 53%;
-        right: 26%;
-    }
-    #moxie:not(.active) {
-        bottom: 43%;
-        left: 27%;
-    }
-    #battery:not(.active) {
-        top: 44%;
-        left: 13%;
-    }
+ #camera:not(.active) {
+    top: 38%;
+    right: 93%;
+}
+
+#moxie:not(.active) {
+    bottom: 62%;
+    right: 42%;
+}
+
+#arm:not(.active) {
+    bottom: 27%;
+    right: 22%;
+}
+
+#wheels:not(.active) {
+    top: 51%;
+    right: 72%;
+}
+
+#battery:not(.active) {
+    top: 24%;
+    left: 86%;
+}
 }
 
 
