@@ -446,8 +446,8 @@ figcaption {
 }
 
 #wheels:not(.active) {
-    top: 40%;
-    right: 74%;
+    top: 50%;
+    right: 70%;
 }
 
 #battery:not(.active) {
