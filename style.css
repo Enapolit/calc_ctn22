@@ -451,8 +451,8 @@ figcaption {
 }
 
 #battery:not(.active) {
-    top: 16%;
-    right: 40%;
+    top: 20%;
+    right: 42%;
 }
 
 
