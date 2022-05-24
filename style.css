@@ -441,13 +441,13 @@ figcaption {
 }
 
 #arm:not(.active) {
-    top: 50%;
-    right: 24%;
+    top: 70%;
+    right: 84%;
 }
 
 #wheels:not(.active) {
-    top: 70%;
-    right: 24%;
+    top: 40%;
+    right: 74%;
 }
 
 #battery:not(.active) {
